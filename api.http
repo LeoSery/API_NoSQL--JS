@@ -1,0 +1,77 @@
+@baseURL=http://localhost:3000
+
+##### Create a character :
+### route : POST "/characters"
+## controller : "CreateCharacter()"
+POST {{baseURL}}/characters
+Content-Type: application/json
+
+{
+    "id": 1,
+    "first_name": "Tony",
+    "last_name": "Stark",
+    "alias": "Iron Man",
+    "height": 185
+}
+
+##### Get all the characters :
+### route : GET "/characters"
+## controller : "GetAllCharacters()"
+GET {{baseURL}}/characters
+
+##### Get a character by id :
+### route : GET "/characters/{id}"
+## controller : "GetCharacter()"
+GET {{baseURL}}/characters/{1}
+
+##### Update a character by id :
+### route : PUT "/characters/{id}"
+## controller : "UpdateCharacter()"
+PUT {{baseURL}}/characters/1
+Content-Type: application/json
+
+{
+    "first_name": "Steve",
+    "last_name": "Rogers",
+    "alias": "Captain America",
+    "height": 188
+}
+
+##### Delete a character by id :
+### route : DELETE "/characters/{id}"
+## controller : "DeleteCharacter()"
+DELETE {{baseURL}}/characters/1
+
+##### Delete all characters :
+### route : DELETE "/characters"
+## controller : "DeleteAllCharacters()"
+DELETE {{baseURL}}/characters
+
+##### Search a specific character :
+### route : GET "/search"
+## controller : "GetCharacterByParameter()"
+### (first_name)
+GET {{baseURL}}/search?type=first_name&value=Tony
+### (last_name)
+GET {{baseURL}}/search?type=last_name&value=Stark
+### (alias)
+GET {{baseURL}}/search?type=alias&value=Iron%20Man
+
+
+##### Sort characters by his first_name, last_name or alias in ascending or descending order :
+### route : GET "/sort"
+## controller : "SortCharacters()"
+### (last_name) (asc)
+GET {{baseURL}}/sort?type=last_name&sort=asc
+### (last_name) (desc)
+GET {{baseURL}}/sort?type=last_name&sort=desc
+
+### (first_name) (asc)
+GET {{baseURL}}/sort?type=first_name&sort=asc
+### (first_name) (desc)
+GET {{baseURL}}/sort?type=first_name&sort=desc
+
+### (alias) (asc)
+GET {{baseURL}}/sort?type=alias&sort=asc
+### (alias) (desc)
+GET {{baseURL}}/sort?type=alias&sort=desc

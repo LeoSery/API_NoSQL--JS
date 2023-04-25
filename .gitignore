@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Webpack
+/dist
+
+# Babel
+/.babelrc
+/.cache/
+/babel.config.js
+
+# Tests
+/coverage
+
+# IDE
+/.idea/
+/.vscode/
+
+# Logs
+logs
+*.log
+
+# Cache
+*.log
+.pnp
+.pnp.js

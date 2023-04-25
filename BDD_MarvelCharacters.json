@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "first_name": "Tony",
+    "last_name": "Stark",
+    "alias": "Iron Man",
+    "height": 185
+  },
+  {
+    "id": 2,
+    "first_name": "Steve",
+    "last_name": "Rogers",
+    "alias": "Captain America",
+    "height": 188
+  },
+  {
+    "id": 3,
+    "first_name": "Bruce",
+    "last_name": "Banner",
+    "alias": "The Hulk",
+    "height": 175
+  },
+  {
+    "id": 4,
+    "first_name": "Thor",
+    "last_name": "Odinson",
+    "alias": "Thor",
+    "height": 198
+  },
+  {
+    "id": 5,
+    "first_name": "Natasha",
+    "last_name": "Romanoff",
+    "alias": "Black Widow",
+    "height": 170
+  },
+  {
+    "id": 6,
+    "first_name": "Clint",
+    "last_name": "Barton",
+    "alias": "Hawkeye",
+    "height": 188
+  },
+  {
+    "id": 7,
+    "first_name": "Peter",
+    "last_name": "Parker",
+    "alias": "Spider-Man",
+    "height": 178
+  },
+  {
+    "id": 8,
+    "first_name": "Wanda",
+    "last_name": "Maximoff",
+    "alias": "Scarlet Witch",
+    "height": 170
+  },
+  {
+    "id": 9,
+    "first_name": "Vision",
+    "last_name": "",
+    "alias": "Vision",
+    "height": 191
+  },
+  {
+    "id": 10,
+    "first_name": "Scott",
+    "last_name": "Lang",
+    "alias": "Ant-Man",
+    "height": 177
+  }
+]
