@@ -1,22 +1,23 @@
 const characterModel = require("../models/characterModel");
-const { hashPassword, comparePassword } = require("../../services/auth");
-const jwt = require("jsonwebtoken");
 
 async function CreateCharacter(req, res) {
   try {
-    const { id, first_name, last_name, alias, height } = req.body;
+    const characters = req.body;
+    const createdCharacters = [];
 
-    const newCharacter = new characterModel({
-      id: id,
-      first_name: first_name,
-      last_name: last_name,
-      alias: alias,
-      height: height,
-    });
-
-    await newCharacter.save();
-
-    res.json(newCharacter);
+    for (let i = 0; i < characters.length; i++) {
+      const { id, first_name, last_name, alias, height } = characters[i];
+      const newCharacter = new characterModel({
+        id: id,
+        first_name: first_name,
+        last_name: last_name,
+        alias: alias,
+        height: height,
+      });
+      await newCharacter.save();
+      createdCharacters.push(newCharacter);
+    }
+    res.json(createdCharacters);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
