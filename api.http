@@ -22,7 +22,7 @@ GET {{baseURL}}/characters
 ##### Get a character by id :
 ### route : GET "/characters/{id}"
 ## controller : "GetCharacter()"
-GET {{baseURL}}/characters/{1}
+GET {{baseURL}}/characters/1
 
 ##### Update a character by id :
 ### route : PUT "/characters/{id}"
